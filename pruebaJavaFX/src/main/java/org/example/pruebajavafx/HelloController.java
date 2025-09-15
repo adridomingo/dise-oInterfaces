@@ -1,6 +1,7 @@
 package org.example.pruebajavafx;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 public class HelloController {
@@ -8,7 +9,10 @@ public class HelloController {
     private Label welcomeText;
 
     @FXML
+    private Button boton1;
+
+    @FXML
     protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+        welcomeText.setText("A");
     }
 }
