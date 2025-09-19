@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="257.0" prefWidth="299.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.radiobuttons.HelloController">
+   <children>
+      <VBox prefHeight="115.0" prefWidth="149.0">
+         <children>
+            <RadioButton fx:id="zaragoza" mnemonicParsing="false" onAction="#rellenarTexto" text="Zaragoza">
+               <VBox.margin>
+                  <Insets left="35.0" top="15.0" />
+               </VBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="provincias" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="huesca" mnemonicParsing="false" onAction="#rellenarTexto" text="Huesca" toggleGroup="$provincias">
+               <VBox.margin>
+                  <Insets left="35.0" top="15.0" />
+               </VBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="teruel" mnemonicParsing="false" onAction="#rellenarTexto" text="Teruel" toggleGroup="$provincias">
+               <VBox.margin>
+                  <Insets left="35.0" top="15.0" />
+               </VBox.margin>
+            </RadioButton>
+         </children>
+      </VBox>
+      <HBox layoutY="106.0" prefHeight="62.0" prefWidth="299.0">
+         <children>
+            <Label text="Seleccion:">
+               <HBox.margin>
+                  <Insets left="35.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="texto" prefHeight="25.0" prefWidth="134.0">
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <VBox layoutX="149.0" prefHeight="115.0" prefWidth="149.0">
+         <children>
+            <ToggleButton mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Zaragoza">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="provincias2" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" text="Huesca" toggleGroup="$provincias2">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </ToggleButton>
+            <ToggleButton mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" text="Teruel" toggleGroup="$provincias2">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </ToggleButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
