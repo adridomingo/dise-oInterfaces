@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="746.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/24.0.1" fx:controller="org.example.tabpanel.HelloController">
+  <tabs>
+      <Tab text="Datos Conductor">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/cara.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="314.0" prefWidth="571.0">
+               <children>
+                  <HBox layoutY="46.0" prefHeight="100.0" prefWidth="600.0">
+                     <children>
+                        <Label text="Nombre">
+                           <HBox.margin>
+                              <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField prefHeight="25.0" prefWidth="166.0">
+                           <HBox.margin>
+                              <Insets bottom="20.0" right="10.0" top="40.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox layoutY="136.0" prefHeight="100.0" prefWidth="600.0">
+                     <children>
+                        <Label text="Apellidos">
+                           <HBox.margin>
+                              <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField prefHeight="25.0" prefWidth="163.0">
+                           <HBox.margin>
+                              <Insets bottom="20.0" right="10.0" top="40.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox layoutY="244.0" prefHeight="60.0" prefWidth="304.0">
+                     <children>
+                        <CheckBox fx:id="coche" mnemonicParsing="false" onAction="#activarCoche" text="Coche">
+                           <HBox.margin>
+                              <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                           </HBox.margin>
+                        </CheckBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutY="304.0" prefHeight="60.0" prefWidth="304.0">
+                     <children>
+                        <CheckBox fx:id="monovolumen" mnemonicParsing="false" onAction="#activarMonovolumen" text="Monovolumen">
+                           <HBox.margin>
+                              <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                           </HBox.margin>
+                        </CheckBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+    <Tab fx:id="pestanaCoche" text="Coche">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/coche.png" />
+               </image>
+            </ImageView>
+         </graphic>
+    </Tab>
+      <Tab fx:id="pestanaMonovolumen" text="Monovolumen">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/monovolumen.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Tab>
+  </tabs>
+</TabPane>
