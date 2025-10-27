@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.controlsfx.control.RangeSlider;
 import org.controlsfx.control.SearchableComboBox;
 
 import java.sql.*;
@@ -16,8 +17,10 @@ public class HelloController {
     private String user = "root";
     private String clave = "1234";
 
+//    @FXML
+//    SearchableComboBox<String> comboBox;
     @FXML
-    SearchableComboBox<String> comboBox;
+    RangeSlider rangeSlider;
     @FXML
     TableView<Capital> tabla;
     @FXML
@@ -51,12 +54,31 @@ public class HelloController {
                 tabla.getItems().add(capital);
             }
 
-            sql="select Provincia from poblacion.capitales";
+            sql = "select MIN(Población) from poblacion.capitales;";
             rs = stat.executeQuery(sql);
-
-            while (rs.next()) {
-                comboBox.getItems().add(rs.getString("Provincia"));
+            if (rs.next()) {
+                rangeSlider.setMin(rs.getInt(1));
             }
+
+
+            sql = "select MAX(Población) from poblacion.capitales;";
+            rs = stat.executeQuery(sql);
+            if (rs.next()) {
+                rangeSlider.setMax(rs.getInt(1));
+                rangeSlider.setHighValue(rs.getInt(1));
+            }
+
+            rangeSlider.setShowTickLabels(true);
+            rangeSlider.setShowTickMarks(true);
+            rangeSlider.setMajorTickUnit(1000000);
+            rangeSlider.setMinorTickCount(0);
+
+//            sql="select Provincia from poblacion.capitales";
+//            rs = stat.executeQuery(sql);
+//
+//            while (rs.next()) {
+//                comboBox.getItems().add(rs.getString("Provincia"));
+//            }
 
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -67,9 +89,11 @@ public class HelloController {
     private void buscar() {
         try {
             tabla.getItems().clear();
+
             Statement stat = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
                     ResultSet.CONCUR_READ_ONLY);
-            String sql = "SELECT * from poblacion.capitales WHERE Provincia LIKE '" + comboBox.getValue() + "';";
+            String sql = "SELECT * from poblacion.capitales WHERE Población >'"
+                    + rangeSlider.getLowValue() + "' AND Población < '" + rangeSlider.getHighValue()+"';";
             rs = stat.executeQuery(sql);
 
             while (rs.next()) {
@@ -85,4 +109,27 @@ public class HelloController {
             throw new RuntimeException(e);
         }
     }
+
+//    @FXML
+//    private void buscar() {
+//        try {
+//            tabla.getItems().clear();
+//            Statement stat = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
+//                    ResultSet.CONCUR_READ_ONLY);
+//            String sql = "SELECT * from poblacion.capitales WHERE Provincia LIKE '" + comboBox.getValue() + "';";
+//            rs = stat.executeQuery(sql);
+//
+//            while (rs.next()) {
+//                Capital capital = new Capital();
+//                capital.setProvincia(rs.getString("Provincia"));
+//                capital.setAutonomía(rs.getString("Autonomía"));
+//                capital.setPoblación(rs.getString("Población"));
+//
+//                tabla.getItems().add(capital);
+//            }
+//
+//        } catch (SQLException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
 }
