@@ -1,21 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="881.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="881.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ej11listadoproductos.HelloController">
    <children>
-      <HBox layoutX="286.0" layoutY="78.0" prefHeight="391.0" prefWidth="547.0">
+      <HBox layoutX="336.0" layoutY="78.0" prefHeight="391.0" prefWidth="516.0">
          <children>
-            <TableView prefHeight="391.0" prefWidth="551.0">
+            <TableView fx:id="tabla" prefHeight="391.0" prefWidth="551.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn fx:id="Cnombre" prefWidth="126.0" text="Nombre" />
+                <TableColumn fx:id="Cunidades" prefWidth="136.0" text="Unidades" />
+                  <TableColumn fx:id="Cprecio" prefWidth="132.0" text="Precio" />
+                  <TableColumn fx:id="Csubtotal" prefWidth="121.0" text="Subtotal" />
               </columns>
             </TableView>
+         </children>
+      </HBox>
+      <VBox layoutX="14.0" layoutY="78.0" prefHeight="307.0" prefWidth="296.0">
+         <children>
+            <Label text="Nombre">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="nombre">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Unidades">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="unidades">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <Label layoutX="10.0" layoutY="52.0" text="Precio">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="precio" layoutX="10.0" layoutY="69.0">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <Button fx:id="agregar" mnemonicParsing="false" onAction="#agregar" text="Agregar a la lista">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="nuevo" mnemonicParsing="false" text="Nuevo Producto">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <HBox layoutX="10.0" layoutY="440.0" prefHeight="58.0" prefWidth="305.0">
+         <children>
+            <Label text="Total:">
+               <HBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="total">
+               <HBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </HBox.margin>
+            </TextField>
          </children>
       </HBox>
    </children>
