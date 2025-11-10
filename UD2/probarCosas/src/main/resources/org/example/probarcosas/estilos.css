@@ -1,0 +1,27 @@
+.botones1 {
+    -fx-background-color : linear-gradient(to bottom, rgb(85, 208, 246), white);
+    -fx-border-color: rgb(255, 255, 255);
+    -fx-border-width: 2px;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+    -fx-font-size: 15px;
+    -fx-font-family: Verdana;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.button1:hover {
+    -fx-background-color: rgb(0, 94, 255);
+}
+
+.botones2 {
+    -fx-background-color : linear-gradient(to bottom, rgb(255, 180, 31), white);
+    -fx-border-color: rgb(255, 255, 255);
+    -fx-border-width: 2px;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+}
+
+.button2:hover {
+    -fx-background-color: rgb(181, 135, 42);
+}

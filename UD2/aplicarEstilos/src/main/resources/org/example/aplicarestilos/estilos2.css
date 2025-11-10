@@ -1,0 +1,17 @@
+.anchorpane {
+    -fx-background-color: red;
+}
+
+.label {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.button {
+    -fx-background-color: rgb(250, 237, 188);
+    -fx-text-fill: rgb(255, 0, 0);
+    -fx-border-color: rgb(255, 0, 0);
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-background-size: 3px;
+}
