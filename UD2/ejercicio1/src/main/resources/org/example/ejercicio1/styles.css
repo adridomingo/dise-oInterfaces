@@ -1,0 +1,45 @@
+.check-box .box {
+    -fx-background-color: rgb(253, 180, 180);
+}
+.check-box:selected .mark {
+    -fx-background-color: rgb(255, 0, 0);
+}
+.check-box:selected .box {
+    -fx-background-color: rgb(191, 255, 0);
+}
+
+.radio-button .radio {
+    -fx-background-color: rgb(0, 255, 64);
+}
+.radio-button:selected .radio {
+    -fx-background-color: rgb(14, 191, 255);
+}
+.radio-button:selected .dot {
+    -fx-background-color: rgb(251, 180, 253);
+}
+
+.slider .track {
+    -fx-background-color: rgb(180, 186, 253);
+}
+
+.slider .thumb {
+    -fx-background-color: rgb(238, 253, 180);
+}
+
+.toggle-button {
+    -fx-background-color: rgb(255, 0, 0);
+}
+.toggle-button:selected {
+    -fx-background-color: rgb(225, 255, 0);
+}
+
+.progress-bar .track {
+    -fx-background-color: rgb(0, 136, 255);
+}
+.progress-bar .bar {
+    -fx-background-color: rgb(111, 255, 0);
+}
+
+.progress-indicator {
+ -fx-progress-color: #FF0000;
+}
