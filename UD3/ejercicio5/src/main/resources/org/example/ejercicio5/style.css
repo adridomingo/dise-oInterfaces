@@ -1,0 +1,39 @@
+.root {
+    -fx-background-color: green;
+}
+
+.label {
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.vbox {
+    -fx-background-color: white;
+}
+
+.hbox {
+    -fx-background-color: blue;
+}
+
+.TextField {
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-size: 10px;
+    -fx-border-color: purple;
+}
+
+.CheckBox {
+    -fx-font-family: "Verdana";
+    -fx-text-fill: grey;
+}
+
+.button {
+    -fx-background-color: red;
+    -fx-border-radius: 25px;
+    -fx-background-radius: 25px;
+    -fx-background-size: 25px;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
