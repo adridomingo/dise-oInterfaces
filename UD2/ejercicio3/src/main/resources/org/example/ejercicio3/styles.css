@@ -1,0 +1,10 @@
+.btnNum {
+    -fx-background-color: rgb(255, 213, 0);
+    -fx-background-radius: 25px;
+    -fx-border-color: rgb(227, 226, 226);
+    -fx-border-width: 5px;
+    -fx-border-radius: 25px;
+}
+.btnNum :hover {
+    -fx-border-color: black;
+}

@@ -8,29 +8,28 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="679.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ejercicio3.HelloController">
    <children>
       <VBox layoutX="27.0" layoutY="66.0" prefHeight="268.0" prefWidth="376.0">
          <children>
             <HBox prefHeight="88.0" prefWidth="376.0">
                <children>
-                  <Button mnemonicParsing="false" text="1">
+                  <Button fx:id="btn1" mnemonicParsing="false" prefHeight="35.0" prefWidth="50.0" styleClass="btnNum" text="1">
                      <HBox.margin>
                         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="2">
+                  <Button fx:id="btn2" mnemonicParsing="false" prefHeight="35.0" prefWidth="50.0" styleClass="btnNum" text="2">
                      <HBox.margin>
                         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="5">
+                  <Button fx:id="btn5" mnemonicParsing="false" prefHeight="35.0" prefWidth="50.0" styleClass="btnNum" text="5">
                      <HBox.margin>
                         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="7">
+                  <Button fx:id="btn7" mnemonicParsing="false" prefHeight="35.0" prefWidth="50.0" styleClass="btnNum" text="7">
                      <HBox.margin>
                         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                      </HBox.margin>
@@ -39,22 +38,22 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="10.0" prefHeight="88.0" prefWidth="376.0">
                <children>
-                  <Button mnemonicParsing="false" text="10">
+                  <Button fx:id="btn10" mnemonicParsing="false" prefHeight="35.0" prefWidth="50.0" styleClass="btnNum" text="10">
                      <HBox.margin>
                         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="15">
+                  <Button fx:id="btn15" mnemonicParsing="false" prefHeight="35.0" prefWidth="50.0" styleClass="btnNum" text="15">
                      <HBox.margin>
                         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="20">
+                  <Button fx:id="btn20" mnemonicParsing="false" prefHeight="35.0" prefWidth="50.0" styleClass="btnNum" text="20">
                      <HBox.margin>
                         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="25">
+                  <Button fx:id="btn25" mnemonicParsing="false" prefHeight="35.0" prefWidth="50.0" styleClass="btnNum" text="25">
                      <HBox.margin>
                         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                      </HBox.margin>
@@ -63,22 +62,22 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="98.0" prefHeight="88.0" prefWidth="376.0">
                <children>
-                  <Button mnemonicParsing="false" text="50">
+                  <Button fx:id="btn50" mnemonicParsing="false" prefHeight="35.0" prefWidth="50.0" styleClass="btnNum" text="50">
                      <HBox.margin>
                         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="60">
+                  <Button fx:id="btn60" mnemonicParsing="false" prefHeight="35.0" prefWidth="50.0" styleClass="btnNum" text="60">
                      <HBox.margin>
                         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="75">
+                  <Button fx:id="btn75" mnemonicParsing="false" prefHeight="35.0" prefWidth="50.0" styleClass="btnNum" text="75">
                      <HBox.margin>
                         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="100">
+                  <Button fx:id="btn100" mnemonicParsing="false" prefHeight="35.0" prefWidth="53.0" styleClass="btnNum" text="100">
                      <HBox.margin>
                         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                      </HBox.margin>
@@ -89,32 +88,32 @@
       </VBox>
       <VBox layoutX="403.0" layoutY="66.0" prefHeight="254.0" prefWidth="262.0">
          <children>
-            <Label text="Label">
+            <Label text="Consigue el siguiente número:">
                <VBox.margin>
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </VBox.margin>
             </Label>
-            <TextField>
+            <TextField fx:id="numAleatorio">
                <VBox.margin>
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </VBox.margin>
             </TextField>
-            <Label layoutX="10.0" layoutY="10.0" text="Label">
+            <Label layoutX="10.0" layoutY="10.0" text="Tu número">
                <VBox.margin>
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </VBox.margin>
             </Label>
-            <TextField layoutX="10.0" layoutY="27.0">
+            <TextField fx:id="numProp" layoutX="10.0" layoutY="27.0">
                <VBox.margin>
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </VBox.margin>
             </TextField>
-            <Button mnemonicParsing="false" text="Button">
+            <Button fx:id="btnNewGame" mnemonicParsing="false" onAction="#newGame" text="New Game">
                <VBox.margin>
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Button">
+            <Button fx:id="btnInstrucciones" mnemonicParsing="false" text="Instrucciones">
                <VBox.margin>
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </VBox.margin>
