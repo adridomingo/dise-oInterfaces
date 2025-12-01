@@ -1,0 +1,18 @@
+.menu-bar {
+ -fx-background-color: #9090da;
+}
+
+.menu-bar .menu:hover {
+ -fx-background-color: #FF0000;
+}
+.menu-bar .menu:showing {
+ -fx-background-color: #FF0000;
+}
+
+.menu-item {
+ -fx-background-color: #0000FF;
+}
+
+.menu-item:hover {
+ -fx-background-color: #00FF00;
+}

@@ -1,0 +1,7 @@
+.button {
+   -fx-background-color: rgb(69, 100, 6);
+}
+
+.label {
+    -fx-text-fill: blue;
+}
