@@ -1,0 +1,37 @@
+
+
+.titulo {
+    -fx-fill: blue;
+    -fx-font-family: Arial;
+    -fx-font-size: 28px;
+}
+
+.label {
+    -fx-font-family: Arial;
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.slider .track {
+    -fx-background-color: blue;
+}
+
+.slider .thumb {
+    -fx-background-color: green;
+}
+
+.progress-indicator {
+    -fx-progress-color: #FF0000;
+}
+
+.toggle-button {
+    -fx-background-color : linear-gradient(to bottom, rgb(85, 208, 246), white);
+    -fx-text-fill: green;
+    -fx-border-width: 2px;
+    -fx-border-color: white;
+}
+
+.toggle-button:hover {
+    -fx-text-fill: red;
+}
