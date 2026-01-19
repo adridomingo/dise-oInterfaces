@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ejinformes1.HelloController">
    <children>
       <HBox layoutX="1.0" layoutY="14.0" prefHeight="74.0" prefWidth="600.0">
@@ -28,7 +27,7 @@
             </ComboBox>
          </children>
       </HBox>
-      <VBox layoutX="222.0" layoutY="234.0" prefHeight="74.0" prefWidth="157.0">
+      <VBox layoutX="222.0" layoutY="234.0" prefHeight="97.0" prefWidth="157.0">
          <children>
             <RadioButton fx:id="infNormal" mnemonicParsing="false" text="Informe Normal">
                <VBox.margin>
@@ -43,9 +42,14 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
             </RadioButton>
+            <RadioButton fx:id="infCapitales" mnemonicParsing="false" text="Informe Capitales" toggleGroup="$inf">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </RadioButton>
          </children>
       </VBox>
-      <Button fx:id="btn" layoutX="234.0" layoutY="339.0" mnemonicParsing="false" onAction="#mostrarInforme" text="Mostrar Informe" />
+      <Button fx:id="btn" layoutX="401.0" layoutY="277.0" mnemonicParsing="false" onAction="#mostrarInforme" text="Mostrar Informe" />
       <HBox layoutX="153.0" layoutY="130.0" prefHeight="45.0" prefWidth="265.0">
          <children>
             <Label text="Salario Min:">

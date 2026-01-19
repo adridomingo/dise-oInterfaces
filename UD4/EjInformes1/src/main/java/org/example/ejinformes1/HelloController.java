@@ -33,6 +33,8 @@ public class HelloController {
     @FXML
     RadioButton infAgrupados;
     @FXML
+    RadioButton infCapitales;
+    @FXML
     Button btn;
 
     @FXML
@@ -48,7 +50,6 @@ public class HelloController {
                 localidadesUnicas.add(rs.getString("Localidad"));
             }
             localidades.getItems().addAll(localidadesUnicas);
-
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -61,7 +62,7 @@ public class HelloController {
         JasperReport jr;
         JasperPrint jp;
         HashMap<String, Object> param = new HashMap<>();
-        param.put("Images/Agenda.png", "file:Images/Agenda.png");
+        param.put("ruta_imagen", "file:Images/Agenda.png");
         if (infNormal.isSelected()) {
             d = JRXmlLoader.load("Informes/EmpleadosSinAgrupar.jrxml");
             jq.setText("SELECT * FROM datos.empleados WHERE Localidad = '" + localidades.getValue()
@@ -70,7 +71,7 @@ public class HelloController {
             jr = JasperCompileManager.compileReport(d);
             jp = JasperFillManager.fillReport(jr,param,con);
             JasperViewer.viewReport(jp,false);
-        } else {
+        } else if (infAgrupados.isSelected()) {
             d = JRXmlLoader.load("Informes/EmpleadosAgrupadosLoc.jrxml");
             jq.setText("SELECT * FROM datos.empleados WHERE Localidad = '" + localidades.getValue()
                     + "' AND Salario > " + Integer.parseInt(min.getText()) + " AND Salario < " + Integer.parseInt(max.getText()));
@@ -78,6 +79,12 @@ public class HelloController {
             jr = JasperCompileManager.compileReport(d);
             jp = JasperFillManager.fillReport(jr,param,con);
             JasperViewer.viewReport(jp,false);
+        } else if (infCapitales.isSelected()) {
+            String fileRepo = "Informes/infcapitales.jasper";
+            JasperPrint jpRepo = JasperFillManager.fillReport(fileRepo, param, con);
+            JasperViewer viewer = new JasperViewer(jpRepo,false);
+            viewer.setTitle("TITULO INFORME");
+            viewer.setVisible(true);
         }
     }
 }
