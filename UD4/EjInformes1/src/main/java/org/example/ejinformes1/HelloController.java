@@ -35,6 +35,10 @@ public class HelloController {
     @FXML
     RadioButton infCapitales;
     @FXML
+    RadioButton infCamposCalc;
+    @FXML
+    TextField autonomia;
+    @FXML
     Button btn;
 
     @FXML
@@ -80,11 +84,20 @@ public class HelloController {
             jp = JasperFillManager.fillReport(jr,param,con);
             JasperViewer.viewReport(jp,false);
         } else if (infCapitales.isSelected()) {
-            String fileRepo = "Informes/infcapitales.jasper";
-            JasperPrint jpRepo = JasperFillManager.fillReport(fileRepo, param, con);
-            JasperViewer viewer = new JasperViewer(jpRepo,false);
+            String fileRepo = "Informes/infCapitalesTabla.jasper";
+            HashMap<String, Object> sel = new HashMap<>();
+            sel.put("SEL", autonomia.getText());
+            JasperPrint jpRepo = JasperFillManager.fillReport(fileRepo, sel, con);
+            JasperViewer viewer = new JasperViewer(jpRepo, false);
             viewer.setTitle("TITULO INFORME");
             viewer.setVisible(true);
+        } else if (infCamposCalc.isSelected()) {
+            d = JRXmlLoader.load("Informes/InfEmpleadosCalc.jrxml");
+            jq.setText("SELECT Nombre,Apellidos,Localidad,Salario,Salario*0.85 AS SalNeto FROM datos.empleados");
+            d.setQuery(jq);
+            jr = JasperCompileManager.compileReport(d);
+            jp = JasperFillManager.fillReport(jr,null,con);
+            JasperViewer.viewReport(jp,false);
         }
     }
 }
