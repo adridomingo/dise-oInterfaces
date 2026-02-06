@@ -1,0 +1,73 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="infcapitales" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="af4fef0c-9c3f-4abe-8655-810d86cf4a02">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BDCAPITALES"/>
+	<query language="SQL"><![CDATA[select * from capitales.capitales;
+]]></query>
+	<field name="Provincia" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Provincia"/>
+		<property name="com.jaspersoft.studio.field.label" value="Provincia"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="capitales"/>
+	</field>
+	<field name="Autonomía" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Autonomía"/>
+		<property name="com.jaspersoft.studio.field.label" value="Autonomía"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="capitales"/>
+	</field>
+	<field name="Población" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Población"/>
+		<property name="com.jaspersoft.studio.field.label" value="Población"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="capitales"/>
+	</field>
+	<sortField name="Autonomía"/>
+	<group name="GroupAutonomia">
+		<expression><![CDATA[$F{Autonomía}]]></expression>
+		<groupHeader>
+			<band height="38">
+				<element kind="textField" uuid="10becf2c-4589-48a2-adcd-3cea4b433f7b" x="210" y="10" width="130" height="20">
+					<expression><![CDATA[$F{Autonomía}]]></expression>
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b643e3b4-f6ee-4188-aac2-0993b1a11a21"/>
+				</element>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="50"/>
+		</groupFooter>
+	</group>
+	<background splitType="Stretch"/>
+	<title height="80" splitType="Stretch">
+		<element kind="staticText" uuid="bdc6c8a0-290f-4fe8-932f-c89bad987fdf" x="0" y="50" width="309" height="30" fontName="Carlito" fontSize="22.0">
+			<text><![CDATA[Informe de Capitales]]></text>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="36" splitType="Stretch">
+		<element kind="staticText" uuid="ad1dbbc1-cc84-47c3-9327-7fd34639fa5c" x="0" y="0" width="185" height="30">
+			<text><![CDATA[Provincia]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cc713bc2-f2ba-44f4-8b3d-88812baf5900"/>
+		</element>
+		<element kind="staticText" uuid="10d20a2a-c31e-4882-872a-2015ff32c8f4" x="185" y="0" width="185" height="30">
+			<text><![CDATA[Autonomía]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b643e3b4-f6ee-4188-aac2-0993b1a11a21"/>
+		</element>
+		<element kind="staticText" uuid="50e38b97-34a2-4863-a11a-8e9dc2e92770" x="370" y="0" width="185" height="30">
+			<text><![CDATA[Población]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="64561431-c861-4b81-ae15-80adb82544f6"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<element kind="textField" uuid="b0c7227d-195e-44d6-9e6b-315fe0b0bdee" x="60" y="0" width="110" height="20">
+				<expression><![CDATA[$F{Provincia}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cc713bc2-f2ba-44f4-8b3d-88812baf5900"/>
+			</element>
+			<element kind="textField" uuid="d70494e9-5f3e-4b11-9430-c004bef664eb" x="360" y="0" width="120" height="20">
+				<expression><![CDATA[$F{Población}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="64561431-c861-4b81-ae15-80adb82544f6"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

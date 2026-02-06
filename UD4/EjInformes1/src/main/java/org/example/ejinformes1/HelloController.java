@@ -8,6 +8,7 @@ import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.view.JasperViewer;
 
+import java.io.InputStream;
 import java.sql.*;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -68,7 +69,9 @@ public class HelloController {
         HashMap<String, Object> param = new HashMap<>();
         param.put("ruta_imagen", "file:Images/Agenda.png");
         if (infNormal.isSelected()) {
+//            InputStream jrxmlStream = getClass().getResourceAsStream("Informes/EmpleadosSinAgrupar.jrxml");
             d = JRXmlLoader.load("Informes/EmpleadosSinAgrupar.jrxml");
+//            d = JRXmlLoader.load(jrxmlStream);
             jq.setText("SELECT * FROM datos.empleados WHERE Localidad = '" + localidades.getValue()
                     + "' AND Salario > " + Integer.parseInt(min.getText()) + " AND Salario < " + Integer.parseInt(max.getText()));
             d.setQuery(jq);
